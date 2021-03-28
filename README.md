@@ -35,45 +35,13 @@ In this article, we are going to implement a Content based recommendation system
 ### Finding the similarity
 
 We know that our recommendation engine will be content based. So, we need to find similar movies to a given movie and then recommend those similar movies to the user. The logic is pretty straightforward. Right?
-
-But, wait…. How can we find out which movies are similar to the given movie in the first place? How can we find out how much similar(or dissimilar) two movies are?
-
-Let us start with something simple and easy to understand.
-
-Suppose, you are given the following two texts:
-
-Text A: London Paris London
-
-Text B: Paris Paris London
-
 How would you find the similarity between Text A and Text B?
-
-Let’s analyze these texts….
-
 1. Text A: Contains the word “London” 2 times and the word “Paris” 1 time.
 2. Text B: Contains the word “London” 1 time and the word “Paris” 2 times.
-
-Now, what will happen if we try to represent these two texts in a 2D plane (with “London” in X axis and “Paris” in Y axis)? Let’s try to do this.
-
-It will look like this-
-
-![ab1]()
-Here, the red vector represents “Text A” and the blue vector represents “Text B”.
-
-Now we have graphically represented these two texts. So, now can we find out the similarity between these two texts?
-
-The answer is “Yes, we can”. But, exactly how?
-
-These two texts are represented as vectors. Right? So, we can say that two vectors are similar if the distance between them is small. By distance, we mean the angular distance between two vectors, which is represented by θ (theta). By thinking further from the machine learning perspective, we can understand that the value of cos θ makes more sense to us rather than the value of θ (theta) because, the cosine(or “cos”) function will map the value of θ in the first quadrant between 0 to 1 (Remember? cos 90° = 0 and cos 0° = 1 ).
-
-And from high school maths, we can remember that there is actually a formula for finding out cos θ between two vectors. See the picture below-
+![ab1](https://github.com/vishalbpatil1/Movie-Lens-Collaborative-Filtering/blob/main/ab11.png)
 
 
-![ab2]()
+Now to finding out cos θ between two vectors. See the picture below-
 
+![ab2](https://github.com/vishalbpatil1/Movie-Lens-Collaborative-Filtering/blob/main/ab11.png)
 
-Don’t get scared, we don’t need to implement the formula from scratch for finding out cos θ. We have our friend Scikit Learn to calculate that for us :)
-
-Let’s see how we can do that.
-
-At first, we need to have text A and B in our program:
