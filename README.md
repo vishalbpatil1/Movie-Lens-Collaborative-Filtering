@@ -27,7 +27,6 @@ This algorithm at first tries to find similar users based on their activities an
 
 Look at the following picture to get a better intuition over content based and collaborative filtering based recommendation systems-
 
-<img src="http://www.codeheroku.com/static/blog/images/pid14_rs_diff.png">
 
 Another type of recommendation system can be created by mixing properties of two or more types of recommendation systems. This type of recommendation systems are known as hybrid recommendation system.
 
@@ -58,8 +57,7 @@ Now, what will happen if we try to represent these two texts in a 2D plane (with
 
 It will look like this-
 
-<img src="http://www.codeheroku.com/static/blog/images/pid14_text_2d_repr.png">
-
+![ab1]()
 Here, the red vector represents “Text A” and the blue vector represents “Text B”.
 
 Now we have graphically represented these two texts. So, now can we find out the similarity between these two texts?
@@ -70,7 +68,9 @@ These two texts are represented as vectors. Right? So, we can say that two vecto
 
 And from high school maths, we can remember that there is actually a formula for finding out cos θ between two vectors. See the picture below-
 
-<img src="http://www.codeheroku.com/static/blog/images/pid14_find_cos_theta.png">
+
+![ab2]()
+
 
 Don’t get scared, we don’t need to implement the formula from scratch for finding out cos θ. We have our friend Scikit Learn to calculate that for us :)
 
